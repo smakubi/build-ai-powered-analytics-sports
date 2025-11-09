@@ -38,12 +38,10 @@ This project contains **Databricks notebooks** and **Unity Catalog Metric Views*
 - Enforces schema and adds contextual fields (e.g., `day_of_week`, `has_promotion`).
 
 #### 🥇 `03-GOLD`
-- Builds the Gold layer with aggregated insights.
+- Builds the Gold layer with aggregated insights to power **AI/BI Genie dashboards** and natural language analysis.
 
-### 🏅 `04-SEMANTIC`  
-- Defines **Unity Catalog Metric Views** to power **AI/BI Genie dashboards** and natural language analysis.
 
-### `05-CLEAN UP`
+### `04-CLEAN UP`
 - This resets the project resources. DO NOT RUN!
 ---
 
