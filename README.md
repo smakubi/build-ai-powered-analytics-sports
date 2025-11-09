@@ -23,9 +23,8 @@ This project contains **Databricks notebooks** and **Unity Catalog Metric Views*
 1. In the Databricks sidebar, go to **Catalog** → locate **`mlb_tech_summit`** → click the **`bronze`** schema.  
 2. Under **Volumes**, navigate to:  
    `raw/all_games`
-3. Click **Upload to this Volume** and upload the following files:
-   - `all_games.snappy.parquet`
-   - `all_games_with_promos.snappy.parquet`
+3. Click **Upload to this Volume** and upload the following file:
+   - `games.snappy.parquet`
 
 ---
 
@@ -39,9 +38,13 @@ This project contains **Databricks notebooks** and **Unity Catalog Metric Views*
 - Enforces schema and adds contextual fields (e.g., `day_of_week`, `has_promotion`).
 
 #### 🥇 `03-GOLD`
-- Builds the Gold layer with aggregated insights.  
+- Builds the Gold layer with aggregated insights.
+
+### 🏅 `04-SEMANTIC`  
 - Defines **Unity Catalog Metric Views** to power **AI/BI Genie dashboards** and natural language analysis.
 
+### `05-CLEAN UP`
+- This resets the project resources. DO NOT RUN!
 ---
 
 ### 4. Build and Explore
