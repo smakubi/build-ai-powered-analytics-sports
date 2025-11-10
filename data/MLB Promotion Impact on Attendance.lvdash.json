@@ -102,13 +102,13 @@
                   "datasetName": "7790cf74",
                   "fields": [
                     {
-                      "name": "avg_lift",
-                      "expression": "`avg_lift`"
+                      "name": "avg(avg_lift)",
+                      "expression": "AVG(`avg_lift`)"
                     }
                   ],
                   "filters": [
                     {
-                      "expression": "`home_team_name` IN ('Arizona Diamondbacks')"
+                      "expression": "`home_team_name` IN (`home_team_name`) OR TRUE"
                     },
                     {
                       "expression": "`season` IN ('2024')"
@@ -117,7 +117,7 @@
                       "expression": "`promotion_type` IN ('Bobblehead', 'Ceremony', 'Concert', 'Day of Game Highlight')"
                     }
                   ],
-                  "disaggregated": true
+                  "disaggregated": false
                 }
               }
             ],
@@ -126,7 +126,7 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "avg_lift",
+                  "fieldName": "avg(avg_lift)",
                   "style": {
                     "bold": true,
                     "fontSize": 48,
@@ -164,6 +164,14 @@
                         "bold": true
                       }
                     ]
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
                   }
                 }
               },
@@ -190,11 +198,11 @@
                   "datasetName": "7790cf74",
                   "fields": [
                     {
-                      "name": "avg_lift_pct",
-                      "expression": "`avg_lift_pct`"
+                      "name": "avg(avg_lift_pct)",
+                      "expression": "AVG(`avg_lift_pct`)"
                     }
                   ],
-                  "disaggregated": true
+                  "disaggregated": false
                 }
               }
             ],
@@ -203,7 +211,7 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "avg_lift_pct",
+                  "fieldName": "avg(avg_lift_pct)",
                   "style": {
                     "bold": true,
                     "fontSize": 48,
@@ -241,6 +249,13 @@
                         "bold": true
                       }
                     ]
+                  },
+                  "format": {
+                    "type": "number-percent",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 0
+                    }
                   }
                 }
               },
@@ -1058,11 +1073,11 @@
                   "datasetName": "56c24327",
                   "fields": [
                     {
-                      "name": "attendance_lift_pct",
-                      "expression": "`attendance_lift_pct`"
+                      "name": "sum(attendance_lift_pct)",
+                      "expression": "SUM(`attendance_lift_pct`)"
                     }
                   ],
-                  "disaggregated": true
+                  "disaggregated": false
                 }
               }
             ],
@@ -1071,15 +1086,7 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "attendance_lift_pct",
-                  "format": {
-                    "type": "number-plain",
-                    "abbreviation": "compact",
-                    "decimalPlaces": {
-                      "type": "max",
-                      "places": 2
-                    }
-                  },
+                  "fieldName": "sum(attendance_lift_pct)",
                   "style": {
                     "color": {
                       "themeColorType": "visualizationColors",
@@ -1130,6 +1137,14 @@
                         "bold": true
                       }
                     ]
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
                   }
                 }
               },
@@ -1919,8 +1934,8 @@
                   "datasetName": "56c24327",
                   "fields": [
                     {
-                      "name": "attendance_lift",
-                      "expression": "`attendance_lift`"
+                      "name": "avg_attendance",
+                      "expression": "`avg_attendance`"
                     }
                   ],
                   "disaggregated": true
@@ -1932,7 +1947,7 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "attendance_lift",
+                  "fieldName": "avg_attendance",
                   "style": {
                     "color": {
                       "themeColorType": "visualizationColors",
@@ -1945,7 +1960,7 @@
               },
               "frame": {
                 "showTitle": true,
-                "title": "Average Attendance Lift",
+                "title": "Average Attendance",
                 "showDescription": false
               }
             }
