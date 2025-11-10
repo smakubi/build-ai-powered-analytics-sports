@@ -1087,14 +1087,6 @@
               "encodings": {
                 "value": {
                   "fieldName": "sum(attendance_lift_pct)",
-                  "format": {
-                    "type": "number-plain",
-                    "abbreviation": "compact",
-                    "decimalPlaces": {
-                      "type": "max",
-                      "places": 2
-                    }
-                  },
                   "style": {
                     "color": {
                       "themeColorType": "visualizationColors",
@@ -1145,6 +1137,14 @@
                         "bold": true
                       }
                     ]
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
                   }
                 }
               },
