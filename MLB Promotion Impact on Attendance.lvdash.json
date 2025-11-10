@@ -55,11 +55,11 @@
                   "datasetName": "7790cf74",
                   "fields": [
                     {
-                      "name": "total_games",
-                      "expression": "`total_games`"
+                      "name": "sum(total_games)",
+                      "expression": "SUM(`total_games`)"
                     }
                   ],
-                  "disaggregated": true
+                  "disaggregated": false
                 }
               }
             ],
@@ -68,7 +68,7 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "total_games",
+                  "fieldName": "sum(total_games)",
                   "style": {
                     "bold": true,
                     "fontSize": 48,
@@ -1173,11 +1173,11 @@
                   "datasetName": "56c24327",
                   "fields": [
                     {
-                      "name": "num_games",
-                      "expression": "`num_games`"
+                      "name": "sum(num_games)",
+                      "expression": "SUM(`num_games`)"
                     }
                   ],
-                  "disaggregated": true
+                  "disaggregated": false
                 }
               }
             ],
@@ -1186,7 +1186,7 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "num_games",
+                  "fieldName": "sum(num_games)",
                   "style": {
                     "color": {
                       "themeColorType": "visualizationColors",
